@@ -11,22 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home1');
-});
+/*
+|------------------------------------------------------------------------------
+| Landing Page 
+|------------------------------------------------------------------------------
+*/
 
 Auth::routes();
+
+Route::get('/', function () {
+    return view('index');
+});
+
+
 Route::get('/index', 'IndexController@index')->name('index');
-Route::get('/adminhome', 'AdminhomeController@index')->name('home');
-//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/contact', 'ContactController@index')->name('contact');
 // example of sub page path route
 Route::get('/contact/index', 'ContactController@index')->name('home');
 
-// Data Lister 
-Route::get('/admin/users', 'UsersController@index')->name('listall_users');
-Route::get('/data','dataController@index')->name('data');
+    //Route::get('/admin/users', 'UsersController@index')->name('listall_users');
+    Route::get('/data','dataController@index')->name('data');
+    Route::get('/adminhome', 'AdminhomeController@index')->name('home');
+    Route::get('/home', 'HomeController@index')->name('home');
 
-
-//post
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/admin/users', 'UsersController@index')->name('listall_users');
+    
+});

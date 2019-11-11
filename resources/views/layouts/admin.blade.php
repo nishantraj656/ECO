@@ -29,135 +29,180 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index3.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+      <!-- Right navbar links -->
+    </nav>
+    <!-- /.navbar -->
 
-    <!-- Right navbar links -->
-    
-  </nav>
-  <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+            style="opacity: .8" />
+        <span class="brand-text font-weight-light">Welcome ECO</span>
+      </a>
 
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">Welcome ECO</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Raj Kumar</a>
+          </div>
         </div>
-        <div class="info">
-          <a href="#" class="d-block">{{Auth::user()->name}}</a>
-        </div>
-      </div>
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-         
-              
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('listall_users')}}">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Users
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                with font-awesome or any other icon font library -->
             
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Application
-                <i class="fas fa-angle-left right"></i>
-              </p>
-</a>
-          </li>
-          <li class="nav-item has-treeview">
-          <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-          <li class="nav-header">LABELS</li>
-          <li class="nav-item">
-          <a class="nav-link" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                     <i class="nav-icon far fa-circle text-danger"></i>
-                                        {{ __('Logout') }}
-                                    </a>
+            <li class="nav-item ">
+              <a class="nav-link" href="{{route('listall_users')}}">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>My Profile</p>
+              </a>
+            </li>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-           
-          </li>
-          
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+            @if(Auth::User()->user_type == "User")
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('listall_users')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Service Form</p>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('listall_users')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>View</p>
+                </a>
+              </li>
+            @endif
+
+            @if(Auth::User()->user_type != "User")
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('listall_users')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>User List</p>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('listall_users')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Process</p>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('listall_users')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>View</p>
+                </a>
+              </li>
+            @endif
+
+            <!-- <li class="nav-item ">
+              <a class="nav-link" href="{{route('listall_users')}}">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Users
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+            </li>
+              
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Application
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item has-treeview">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-envelope"></i>
+                <p>
+                  Mailbox
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+            </li> -->
+            <li class="nav-header">LABELS</li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                <i class="nav-icon far fa-circle text-danger"></i>
+                  {{ __('Logout') }}
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+            
+            </li>  
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <section>
+      @yield('content')
+    </section>
+    <div class="content-wrapper">
     </div>
-    <!-- /.sidebar -->
-  </aside>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2019 <a href="#">Ethiopia Consulate Office</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.0.0
+      </div>
+    </footer>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-  @yield('content')
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
   </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2019 <a href="#">Ethiopia Consulate Office</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.0
-    </div>
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
-</div>
 <!-- ./wrapper -->
 
 <!-- jQuery -->

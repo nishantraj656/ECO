@@ -1,5 +1,7 @@
- @extends('layouts.admin')
+@extends('layouts.admin')
 
 @section('content')
+
 <p>This admin home</p>
+
 @endsection

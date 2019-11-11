@@ -16,26 +16,24 @@
           </div><!-- /.col -->
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
- </div>
+    </div>
     <section class="content">
       <div class="container-fluid">
-        <p><
-            <a href="#" class="btn btn-primary">Add New User</a>
-</p>
-<table class="table table-bordered table-striped">
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>password</th>
-</tr>
-  @foreach($listall_users as $u)
-    <tr>
-      <td>{{$u->name}}</td>
-      <td><{{$u->Email}}</td>
-      <td>{{$u->password}}</td>
-      <td><a href="#" class="btn btn-info">Edit</a><a href="#" class="btn btn-danger">Delete</a></td>
-</tr>
-@endforeach
-      </div>
-      </section>
+    <table class="table table-bordered table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>password</th>
+      </tr>
+      @foreach($listall_users as $u)
+        <tr>
+          <td>{{$u->name}}</td>
+          <td><{{$u->email}}</td>
+          <td>{{$u->password}}</td>
+          <td><a href="#" class="btn btn-danger">Deative</a></td>
+        </tr>
+      @endforeach
+    </table>
+  </div>
+</section>
 @endsection;

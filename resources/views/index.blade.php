@@ -42,21 +42,19 @@
                 <a class="nav-link page-scroll" href="#app-features">Service</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#screenshots">About Us</a>
+                <a class="nav-link page-scroll" href="#About Us">About Us</a>
               </li>                            
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#testimonial">Contact</a>
+                <a class="nav-link page-scroll" href="#Contect">Contact</a>
               </li> 
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link page-scroll" href="#testimonial">Testimonial</a>
-              </li>  
+              </li>   -->
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#download">login</a>
-             <!-- </li> 
-                <a class="nav-link page-scroll" href="{{ url('auth/login') }}"> mukera</a>
-              </li>-->
+                <a class="nav-link page-scroll" href="{{ route('login') }}">login</a>
+              </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#map-area">register</a>
+                <a class="nav-link page-scroll" href="{{ route('register') }}">register</a>
               </li> 
             </ul>
           </div>
@@ -88,7 +86,7 @@
     <div id="app-features" class="section">
       <div class="container">
         <div class="section-header">   
-          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">features</p>       
+          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Service</p>       
           <h2 class="section-title wow fadeIn" data-wow-delay="0.2s">Our main service Features</h2>
         </div>
         <div class="row">
@@ -127,15 +125,13 @@
             <div class="show-box">
               <img src="img/features/app.png" alt="">
             </div>
-</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- features Section End -->
 
+  
     <!-- Start Video promo Section -->
     <section class="video-promo section">
       <div class="overlay"></div>
