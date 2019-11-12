@@ -30,7 +30,7 @@
           <td>{{$u->name}}</td>
           <td><{{$u->email}}</td>
           <td>{{$u->password}}</td>
-          <td><a href="#" class="btn btn-danger">Deative</a></td>
+          <td><a href="#" class="btn btn-danger">Deactive</a></td>
         </tr>
       @endforeach
     </table>

@@ -94,11 +94,14 @@
               </a>
             </li>
 
-            @if(Auth::User()->user_type == "User")
+            @if(Auth::User()->user_type == "user")
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
-                  <p>Service Form</p>
+                  <p>Service Form
+                  <i class="fas fa-angle-left right"></i>
+                  </p>
+
                 </a>
               </li>
 
@@ -110,7 +113,7 @@
               </li>
             @endif
 
-            @if(Auth::User()->user_type != "User")
+            @if(Auth::User()->user_type != "user")
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
