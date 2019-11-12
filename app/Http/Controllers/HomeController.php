@@ -60,7 +60,7 @@ class HomeController extends Controller
                       'shedule'=>$Schedule
                 );
 
-        return view('admin.dashboard')->with($data);
+        return view('Admin.dashboard')->with($data);
     
     }
     

@@ -24,7 +24,7 @@ class SheduleController extends Controller
      */
     public function index()
     {
-        return view('admin.users.shrdule');
+        return view('Admin.users.shrdule');
     }
 
 

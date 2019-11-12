@@ -23,7 +23,7 @@ class VisaController extends Controller
      */
     public function index()
     {
-        return view('admin.users.visa');
+        return view('Admin.users.visa');
     }
 
     public function create(VisaRequest $request){

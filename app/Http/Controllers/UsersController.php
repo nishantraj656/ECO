@@ -15,6 +15,6 @@ class UsersController extends Controller
     public function index()
     {
         $arr['listall_users']= User::all();
-        return view ('admin.users.index')->with($arr);
+        return view ('Admin.users.index')->with($arr);
     }
 }

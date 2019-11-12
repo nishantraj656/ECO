@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `contect_us` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `contect_us` (
 --
 
 CREATE TABLE `ethiopians` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ;
 
@@ -56,7 +56,7 @@ CREATE TABLE `ethiopians` (
 --
 
 CREATE TABLE `legalizations` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ;
 
@@ -95,7 +95,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `news` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `Title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `Description` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE `news` (
 --
 
 CREATE TABLE `passports` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ;
 
@@ -132,7 +132,7 @@ CREATE TABLE `password_resets` (
 --
 
 CREATE TABLE `payments` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `cardNumber` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `expDate` date NOT NULL,
   `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -149,7 +149,7 @@ CREATE TABLE `payments` (
 --
 
 CREATE TABLE `schedules` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ;
 
@@ -160,7 +160,7 @@ CREATE TABLE `schedules` (
 --
 
 CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'user',
@@ -185,7 +185,7 @@ INSERT INTO `users` (`id`, `name`, `email`, `user_type`, `email_verified_at`, `p
 --
 
 CREATE TABLE `visas` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `id` int(20) UNSIGNED NOT NULL,
   `name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL
 ) ;
 
@@ -227,9 +227,7 @@ ALTER TABLE `payments`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
-
+  ADD PRIMARY KEY (`id`);
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -238,63 +236,63 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contect_us`
 --
 ALTER TABLE `contect_us`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `ethiopians`
---
-ALTER TABLE `ethiopians`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- --
+-- ALTER TABLE `ethiopians`
+--   MODIFY `id` int(20) AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `legalizations`
---
-ALTER TABLE `legalizations`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- --
+-- -- AUTO_INCREMENT for table `legalizations`
+-- --
+-- ALTER TABLE `legalizations`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `migrations`
---
-ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+-- --
+-- -- AUTO_INCREMENT for table `migrations`
+-- --
+-- ALTER TABLE `migrations`
+--   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
---
--- AUTO_INCREMENT for table `news`
---
-ALTER TABLE `news`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- --
+-- -- AUTO_INCREMENT for table `news`
+-- --
+-- ALTER TABLE `news`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `passports`
---
-ALTER TABLE `passports`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- --
+-- -- AUTO_INCREMENT for table `passports`
+-- --
+-- ALTER TABLE `passports`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `payments`
---
-ALTER TABLE `payments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- --
+-- -- AUTO_INCREMENT for table `payments`
+-- --
+-- ALTER TABLE `payments`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `schedules`
---
-ALTER TABLE `schedules`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- --
+-- -- AUTO_INCREMENT for table `schedules`
+-- --
+-- ALTER TABLE `schedules`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+-- --
+-- -- AUTO_INCREMENT for table `users`
+-- --
+-- ALTER TABLE `users`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
---
--- AUTO_INCREMENT for table `visas`
---
-ALTER TABLE `visas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-COMMIT;
+-- --
+-- -- AUTO_INCREMENT for table `visas`
+-- --
+-- ALTER TABLE `visas`
+--   MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+-- COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+-- /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+-- /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
