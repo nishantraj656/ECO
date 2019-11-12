@@ -94,14 +94,13 @@
               </a>
             </li>
 
-            @if(Auth::User()->user_type == "user")
+            @if(Auth::User()->user_type == "User")
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('services')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>Service Form
                   <i class="fas fa-angle-left right"></i>
                   </p>
-
                 </a>
               </li>
 
@@ -120,7 +119,7 @@
               </li>
             @endif
 
-            @if(Auth::User()->user_type != "user")
+            @if(Auth::User()->user_type != "User")
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
@@ -143,12 +142,12 @@
               </li>
             
             @endif
-            <li class="nav-item ">
+            <!-- <li class="nav-item ">
               <a class="nav-link" href="{{route('listall_users')}}">
                 <i class="nav-icon fas fa-edit"></i>
                 <p>Logout</p>
               </a>
-            </li>
+            </li> -->
 
             <!-- <li class="nav-item ">
               <a class="nav-link" href="{{route('listall_users')}}">
@@ -178,8 +177,8 @@
                   <i class="fas fa-angle-left right"></i>
                 </p>
               </a>
-            </li> -->
-            {{-- <li class="nav-header">LABELS</li>
+            <li> -->
+            <!-- <li class="nav-header">LABELS</li> -->
             <li class="nav-item">
               <a class="nav-link" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
@@ -191,7 +190,7 @@
                   @csrf
               </form>
             
-            </li>   --}}
+            </li> 
           </ul>
         </nav>
         <!-- /.sidebar-menu -->

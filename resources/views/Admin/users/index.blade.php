@@ -25,6 +25,7 @@
         <th>Email</th>
         <th>password</th>
       </tr>
+
       @foreach($listall_users as $u)
         <tr>
           <td>{{$u->name}}</td>

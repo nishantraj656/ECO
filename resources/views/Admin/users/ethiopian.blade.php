@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Visa</h1>
+            <h1 class="m-0 text-dark">Ethiopian</h1>
           </div><!-- /.col -->
           {{-- <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Visa</li>
+              <li class="breadcrumb-item active">ethiopian</li>
             </ol>
           </div><!-- /.col --> --}}
         </div><!-- /.row -->
@@ -23,13 +23,13 @@
             <label for="name">Full Name:</label>
             <div class="row">
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">             
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" require>             
               </div>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="mname" name="mname" placeholder="Middle Name">             
-              </div><!-- c   -->
+              </div>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">             
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" require>             
               </div>
             </div>
           </div>
@@ -46,7 +46,12 @@
             <label for="dob">DOB : </label>
             <input type="date" class="form-control" name="dob" require> 
           </div>
-
+            
+          <div class="form-group">
+            <label for="bplace">Birth Place : </label>
+            <input type="text" class="form-control" name="bplace" require>
+          </div>
+          
           <div class="form-group">
             <label for="nationality">Nationality : </label>
             <input type="nationality" class="form-control" name="nationality" require>
@@ -57,10 +62,7 @@
             <input type="text" class="form-control" name="passport">
           </div>
 
-          <!-- <div class="form-group">
-            <label for="ecolor">Eye Color : </label>
-            <input type="text" class="form-control" name="ecolor" require>
-          </div> -->
+          
           
           <div class="form-group">
             <label for="mststus">Marital Status :</label>
@@ -101,23 +103,13 @@
           </div>
 
           <div class="form-group">
-            <label for="pot">Purpose of Travel : </label>
-            <input type="text" class="form-control" name="pot">
+            <label for="photo">Photo Upload: </label>
+            <input type="file" class="form-control" name="photo" >
           </div>
 
           <div class="form-group">
-            <label for="DFU">Departure From USA : </label>
-            <input type="date" class="form-control" name="DFU" require> 
-          </div>
-
-          <div class="form-group">
-            <label for="AIE">Date of Arrival in Ethiopia : </label>
-            <input type="date" class="form-control" name="AIE" require> 
-          </div>
-
-          <div class="form-group">
-            <label for="DSE">Duration of stay in Ethiopia : </label>
-            <input type="text" class="form-control" name="DSE">
+            <label for="sign">Signature Upload: </label>
+            <input type="file" class="form-control" name="sign" >
           </div>
 
           <button type="submit" class="btn btn-success">Submit</button>
