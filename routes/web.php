@@ -47,3 +47,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users', 'UsersController@index')->name('listall_users');
     
 });
+
