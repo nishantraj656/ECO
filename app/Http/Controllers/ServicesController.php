@@ -16,11 +16,10 @@ class ServicesController extends Controller
             case 'visa':
                 return view('Admin.users.visa');
             case 'legalization&Authentication':
-                return ;//the form  view('Admin.users.');
+                return view('Admin.users.legel');
             case 'ScheduleAppointement':
                 return view('Admin.users.shrdule');
             case 'ethiopian':
-                return ; //Ethopian form
-        }
+                return view('Admin.users.ethiopian');        }
     }
 }

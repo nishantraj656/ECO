@@ -22,9 +22,42 @@ class LegalizationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(LegelRequest $request)
     {
-        //
+        $legel = new Legalization();
+        try{
+            
+            $name = array('fname'=> $request->fname,
+                            'mname'=> $request->mname,
+                            'lname'=> $request->lname);
+            
+            $legel->name = json_encode($name);
+            $legel->gender = $request->sex;
+            $legel->dob = $request->dob;
+            $legel->placeOfBirth = $request->bplace;
+            $legel->nasality = $request->nationality;
+            $legel->passportnumber = $request->passport;
+            $legel->email = $request->email;
+            $legel->marital = $request->mststus;
+            $legel->userID = Auth::User()->id;
+
+            $address = array('base'=>$request->address,
+                             'city'=> $request->City,
+                              'state' => $request->State,
+                              'country'=>$request->Country
+                            );
+            
+            $legel->address = json_encode($address);
+            $legel->document = "";
+            $legel->paymentID = 0;
+            $legel->status = "Open";
+
+            $legel->save();
+        }
+        catch(Exception $e){
+
+        
+        }
     }
 
     /**

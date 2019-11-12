@@ -5,12 +5,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Visa</h1>
+            <h1 class="m-0 text-dark">Legalization</h1>
           </div><!-- /.col -->
           {{-- <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Visa</li>
+              <li class="breadcrumb-item active">legalization</li>
             </ol>
           </div><!-- /.col --> --}}
         </div><!-- /.row -->
@@ -27,7 +27,7 @@
               </div>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="mname" name="mname" placeholder="Middle Name">             
-              </div><!-- c   -->
+              </div>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">             
               </div>
@@ -46,7 +46,12 @@
             <label for="dob">DOB : </label>
             <input type="date" class="form-control" name="dob" require> 
           </div>
-
+            
+          <div class="form-group">
+            <label for="bplace">Birth Place : </label>
+            <input type="text" class="form-control" name="bplace" require>
+          </div>
+          
           <div class="form-group">
             <label for="nationality">Nationality : </label>
             <input type="nationality" class="form-control" name="nationality" require>
@@ -57,10 +62,7 @@
             <input type="text" class="form-control" name="passport">
           </div>
 
-          <!-- <div class="form-group">
-            <label for="ecolor">Eye Color : </label>
-            <input type="text" class="form-control" name="ecolor" require>
-          </div> -->
+          
           
           <div class="form-group">
             <label for="mststus">Marital Status :</label>
@@ -101,23 +103,13 @@
           </div>
 
           <div class="form-group">
-            <label for="pot">Purpose of Travel : </label>
-            <input type="text" class="form-control" name="pot">
+            <label for="doc">Document Upload: </label>
+            <input type="file" class="form-control" name="doc" >
           </div>
 
           <div class="form-group">
-            <label for="DFU">Departure From USA : </label>
-            <input type="date" class="form-control" name="DFU" require> 
-          </div>
-
-          <div class="form-group">
-            <label for="AIE">Date of Arrival in Ethiopia : </label>
-            <input type="date" class="form-control" name="AIE" require> 
-          </div>
-
-          <div class="form-group">
-            <label for="DSE">Duration of stay in Ethiopia : </label>
-            <input type="text" class="form-control" name="DSE">
+            <label for="sign">Signature Upload: </label>
+            <input type="file" class="form-control" name="sign" >
           </div>
 
           <button type="submit" class="btn btn-success">Submit</button>

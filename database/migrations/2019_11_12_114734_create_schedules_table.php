@@ -17,7 +17,7 @@ class CreateSchedulesTable extends Migration
             $table->bigIncrements('id');
             $table->json('name');//{first:'',middle:'',last:''}
             $table->date('DeparturefromUSA');
-        
+            
             $table->string('email');
             $table->string('phonenumber');
             $table->json('address');//{street:'',city:'',state:'',country:''}

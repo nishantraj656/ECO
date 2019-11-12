@@ -22,9 +22,41 @@ class EthiopianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(EthiopianIdRequest $request)
     {
-        //
+        $ethiopim = new Ethiopian();
+        try{
+            
+            $name = array('fname'=> $request->fname,
+                            'mname'=> $request->mname,
+                            'lname'=> $request->lname);
+            
+            $ethiopian->name = json_encode($name);
+            $ethiopian->gender = $request->sex;
+            $ethiopian->dob = $request->dob;
+            $ethiopian->placeOfBirth = $request->bplace;
+            $ethiopian->nasality = $request->nationality;
+            $ethiopian->passportnumber = $request->passport;
+            $ethiopian->marital = $request->mststus;
+            $ethiopian->userID = Auth::User()->id;
+
+            $address = array('base'=>$request->address,
+                             'city'=> $request->City,
+                              'state' => $request->State,
+                              'country'=>$request->Country
+                            );
+            
+            $ethiopian->address = json_encode($address);
+            $ethiopian->pic = "";
+            $ethiopian->paymentID = 0;
+            $ethiopian->status = "Open";
+
+            $ethiopian->save();
+        }
+        catch(Exception $e){
+
+        
+        }
     }
 
     /**

@@ -16,13 +16,13 @@ class ContactController extends Controller
     }
 
     public function index()
-{
-    $data = DB::select('select * from ContactUs');
-    return view('contact',['data'=>$data]);
-    //$arr['Listall_mailboxs']= Contact::all();
-     // return view ('admin.users.contact')->with($arr);
-     // return contact.blade.php
-      //return view('contact_index');
-}
+    {
+        $data = DB::select('select * from contect_us');
+        return view('contact',['data'=>$data]);
+        //$arr['Listall_mailboxs']= Contact::all();
+        // return view ('admin.users.contact')->with($arr);
+        // return contact.blade.php
+        //return view('contact_index');
+    }
 }
 
