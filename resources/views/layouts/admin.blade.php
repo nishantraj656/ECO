@@ -77,7 +77,7 @@
             <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block">Raj Kumar</a>
+            <a href="#" class="d-block"> {{ Auth::user()->name }} </a>
           </div>
         </div>
 
@@ -96,7 +96,7 @@
 
             @if(Auth::User()->user_type == "User")
               <li class="nav-item ">
-                <a class="nav-link" href="{{route('listall_users')}}">
+                <a class="nav-link" href="{{route('services')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>Service Form</p>
                 </a>
@@ -105,7 +105,14 @@
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
-                  <p>View</p>
+                  <p>Application</p>
+                </a>
+              </li>
+
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('contact')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Contact Us</p>
                 </a>
               </li>
             @endif
@@ -131,7 +138,14 @@
                   <p>View</p>
                 </a>
               </li>
+            
             @endif
+            <li class="nav-item ">
+              <a class="nav-link" href="{{route('listall_users')}}">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>Logout</p>
+              </a>
+            </li>
 
             <!-- <li class="nav-item ">
               <a class="nav-link" href="{{route('listall_users')}}">
@@ -162,7 +176,7 @@
                 </p>
               </a>
             </li> -->
-            <li class="nav-header">LABELS</li>
+            {{-- <li class="nav-header">LABELS</li>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('logout') }}"
                   onclick="event.preventDefault();
@@ -174,7 +188,7 @@
                   @csrf
               </form>
             
-            </li>  
+            </li>   --}}
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -183,10 +197,9 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <section>
-      @yield('content')
-    </section>
+   
     <div class="content-wrapper">
+        @yield('content')
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">

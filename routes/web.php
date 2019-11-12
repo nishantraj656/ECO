@@ -35,8 +35,13 @@ Route::get('/contact/index', 'ContactController@index')->name('home');
     Route::get('/payment', 'AdminhomeController@payment')->name('Payment');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/passport', 'PassportController@index')->name('Passport');
+    Route::post('/passport', 'PassportController@index')->name('Passport');
     Route::get('/visa', 'VisaController@index')->name('visa');
     Route::get('/shedule', 'SheduleController@index')->name('shrdule');
+    Route::post('/services/get', 'ServicesController@checkType')->name('getform');
+    Route::get('/services', function(){
+        return view('Admin.users.services');
+    })->name('services');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users', 'UsersController@index')->name('listall_users');
