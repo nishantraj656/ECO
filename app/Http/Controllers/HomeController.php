@@ -6,9 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Ethiopian;
 use App\passport;
-use App\Legalzation;
+use App\Legalization;
 use App\Visa;
 use App\Schedule;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -37,7 +38,7 @@ class HomeController extends Controller
                                     ->where('UserID',$id);
             $passport = passport::where('status',0)
                                     ->where('UserID',$id);
-            $Legalzation = Legalzation::where('status',0)
+            $Legalzation = Legalization::where('status',0)
                                     ->where('UserID',$id);
             $Visa = Visa::where('status',0)
                                     ->where('UserID',$id);
@@ -47,7 +48,7 @@ class HomeController extends Controller
         else{
             $ethiopian = Ethiopian::where('status',0);
             $passport = passport::where('status',0);
-            $Legalzation = Legalzation::where('status',0);
+            $Legalzation = Legalization::where('status',0);
             $Visa = Visa::where('status',0);
             $Schedule = Schedule::where('status',0);
         }

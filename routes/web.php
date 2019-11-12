@@ -31,8 +31,8 @@ Route::get('/contact', 'ContactController@index')->name('contact');
 Route::get('/contact/index', 'ContactController@index')->name('home');
 
     //Route::get('/admin/users', 'UsersController@index')->name('listall_users');
-    Route::get('/data','dataController@index')->name('data');
-    Route::get('/payment', 'AdminhomeController@payment')->name('Payment');
+    Route::post('/ethiopian','EthiopianController@create')->name('ethiopian');
+    Route::post('/payment', 'PaymentController@create');
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/passport', 'PassportController@index')->name('Passport');
     Route::post('/passport', 'PassportController@index')->name('Passport');
@@ -45,6 +45,5 @@ Route::get('/contact/index', 'ContactController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users', 'UsersController@index')->name('listall_users');
-    
 });
 

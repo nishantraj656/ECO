@@ -19,11 +19,12 @@
     </div>
     <section class="content">
       <div class="container-fluid">
-        <form class="form-horizontal" action="/action_page.php">
+        <form class="form-horizontal" method = "POST" action="{{route('payment')}}">
+            @csrf
             <div class="form-group">
             <label class="control-label col-sm-4" for="email">Enter Application No:</label>
             <div class="col-sm-8">
-                <input type="number" class="form-control" id="App_no." placeholder="Application No" name="App_num">
+                <input type="number" class="form-control" id="App_no" placeholder="Application No" name="App_num">
             </div>
             </div>
             <div class="form-group">

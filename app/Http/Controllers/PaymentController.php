@@ -22,9 +22,26 @@ class PaymentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $payment = new payment();
+        try{
+            
+            $payment->cardNumber = $request->card_number;
+            $payment->appNo = $request->App_num;
+            $payment->expDate = $request->exp_date;
+            $payment->scode = $request->code;
+            $payment->name = $request->chname;
+
+            $payment->status = "0";
+
+            $payment->save();
+        }
+        catch(Exception $e){
+
+        
+        }
+
     }
 
     /**

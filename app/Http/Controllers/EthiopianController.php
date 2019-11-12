@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ethiopian;
 use Illuminate\Http\Request;
+use Auth;
 
 class EthiopianController extends Controller
 {
