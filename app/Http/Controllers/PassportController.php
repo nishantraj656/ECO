@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class PassportController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.adminReport');
+        return view('admin.users.Passport');
     }
-    
 }
