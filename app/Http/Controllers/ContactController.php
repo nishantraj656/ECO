@@ -18,7 +18,7 @@ class ContactController extends Controller
     public function index()
 {
     $data = DB::select('select * from ContactUs');
-    return view('admin.users.Contact',['data'=>$data]);
+    return view('contact',['data'=>$data]);
     //$arr['Listall_mailboxs']= Contact::all();
      // return view ('admin.users.contact')->with($arr);
      // return contact.blade.php

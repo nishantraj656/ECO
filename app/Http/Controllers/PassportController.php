@@ -25,4 +25,11 @@ class PassportController extends Controller
     {
         return view('admin.users.Passport');
     }
+
+    /**This function is use to create new passport form*/
+
+    public function create()
+    {
+        
+    }
 }

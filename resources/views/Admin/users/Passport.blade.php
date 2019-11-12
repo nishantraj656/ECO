@@ -1,6 +1,6 @@
-@extends('layouts.admin')
-@section('content')
-<div class="content-wrapper">
+@extends('Admin.users.services')
+@section('services')
+
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -8,12 +8,12 @@
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Passport</h1>
           </div><!-- /.col -->
-          <div class="col-sm-6">
+          {{-- <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
               <li class="breadcrumb-item active">Passport</li>
             </ol>
-          </div><!-- /.col -->
+          </div><!-- /.col --> --}}
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
@@ -24,19 +24,19 @@
             <label for="name">Full Name:</label>
             <div class="row">
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name">             
+                <input type="text" class="form-control" id="fname" name="fname" placeholder="First Name" required>             
               </div>
               <div class="col-sm-4">
                 <input type="text" class="form-control" id="mname" name="mname" placeholder="Middle Name">             
               </div>
               <div class="col-sm-4">
-                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name">             
+                <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" required>             
               </div>
             </div>
           </div>
           <div class="form-group">
             <label for="sex">Gender :</label>
-            <select class="form-control" name="sex">
+            <select class="form-control" name="sex" required>
               <option>Male</option>
               <option>Female</option>
               <option>Transgender</option>
@@ -88,26 +88,26 @@
 
           <div class="form-group">
             <label for="address">Address :</label>
-            <textarea class="form-control" rows="5" name="address"></textarea>
+            <textarea class="form-control" rows="5" name="address" required></textarea>
           </div>
           
           <div class="form-group">
             <div class="row">
               <div class="col-sm-4">
-                <input type="text" class="form-control"  name="City" placeholder="City">             
+                <input type="text" class="form-control"  name="City" placeholder="City" required>             
               </div>
               <div class="col-sm-4">
-                <input type="text" class="form-control"  name="State" placeholder="State">             
+                <input type="text" class="form-control"  name="State" placeholder="State" required>             
               </div>
               <div class="col-sm-4">
-                <input type="text" class="form-control" name="Country" placeholder="Country">             
+                <input type="text" class="form-control" name="Country" placeholder="Country" required>             
               </div>
             </div>
           </div>
 
           <div class="form-group">
             <label for="POT">Purpose of Travel :</label>
-            <select class="form-control" name="POT">
+            <select class="form-control" name="POT" required>
               <option value="renewal">Passport Renewal</option>
               <option value="Lost">Lost Passport</option>
             </select>
@@ -117,5 +117,4 @@
         </form>
       </div>
     </section>
-</div>
 @endsection;
