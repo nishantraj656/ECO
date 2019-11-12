@@ -60,27 +60,81 @@
           </div>
         </div>
       </nav>  
-      <div class="container">      
-        <div class="row space-100">
-          <div class="col-lg-7 col-md-12 col-xs-12">
-            <div class="contents">
-              <h2 class="head-title">Ethiopian Consulate Office <br> Serve you with Pride!</h2>
-              <p>Ethiopian for Ethiopian Community </p>
-              <div class="header-button">
-                <a href="#" class="btn btn-border-filled">Learn More</a>
-                <a href="#" class="btn btn-border">Get Started</a>
+
+      <h1>fuck</h1>
+
+
+      {{-- SLider:START --}}
+      <div class="bd-example">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://rukminim1.flixcart.com/flap/1688/280/image/1a492ed9224534e8.jpg?q=50" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                {{-- <h5>First slide label</h5> --}}
+                {{-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> --}}
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://rukminim1.flixcart.com/flap/1688/280/image/aff0eb55f47c5bb6.jpg?q=50" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                {{-- <h5>Second slide label</h5> --}}
+                {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> --}}
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://rukminim1.flixcart.com/flap/1688/280/image/2da22ddb4ab1f7bd.jpg?q=50" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                {{-- <h5>Third slide label</h5> --}}
+                {{-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> --}}
               </div>
             </div>
           </div>
-          <div class="col-lg-5 col-md-12 col-xs-12">
-            <div class="intro-img">
-              <img src="img/intro-mobile.png" alt="">
-            </div>            
-          </div>
-        </div> 
-      </div>             
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      {{-- Slider:END --}}
+        {{-- <div class="container">      
+          <div class="row space-100">
+            <div class="col-lg-7 col-md-12 col-xs-12">
+              <div class="contents">
+                <h2 class="head-title">Ethiopian Consulate Office <br> Serve you with Pride!</h2>
+                <p>Ethiopian for Ethiopian Community </p>
+                <div class="header-button">
+                  <a href="#" class="btn btn-border-filled">Learn More</a>
+                  <a href="#" class="btn btn-border">Get Started</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-xs-12">
+              <div class="intro-img">
+                <img src="img/intro-mobile.png" alt="">
+              </div>            
+            </div>
+          </div> 
+        </div>    --}}
+        
+      
+
+
+
+
+
     </header>
     <!-- Header Section End --> 
+  
 
     <!-- features Section Start -->
     <div id="app-features" class="section">
