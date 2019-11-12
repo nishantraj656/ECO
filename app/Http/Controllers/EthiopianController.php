@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Ethiopian;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+//use App\Http\Requests\EthiopianIdRequest;
 use Auth;
 
 class EthiopianController extends Controller
@@ -23,9 +25,9 @@ class EthiopianController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(EthiopianIdRequest $request)
+    public function create(Request $request)
     {
-        $ethiopim = new Ethiopian();
+        $ethiopian = new Ethiopian();
         try{
             
             $name = array('fname'=> $request->fname,
@@ -53,10 +55,14 @@ class EthiopianController extends Controller
             $ethiopian->status = "Open";
 
             $ethiopian->save();
+
+            $message = "Saved Successfully";
+            return Redirect::to('/services');
+            
         }
         catch(Exception $e){
-
-        
+            $message = "Saved Successfully";
+            return Redirect::to('/services');
         }
     }
 

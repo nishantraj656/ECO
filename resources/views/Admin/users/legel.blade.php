@@ -18,7 +18,8 @@
     </div>
     <section class="content">
       <div class="container">
-        <form class="form" action="/action_page.php">
+        <form class="form" method="POST" action="{{route('legel')}}">
+           @csrf
           <div class="form-group">
             <label for="name">Full Name:</label>
             <div class="row">

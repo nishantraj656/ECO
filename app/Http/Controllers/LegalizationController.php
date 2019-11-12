@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Legalization;
 use Illuminate\Http\Request;
+use Auth;
 
 class LegalizationController extends Controller
 {
@@ -22,7 +23,7 @@ class LegalizationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(LegelRequest $request)
+    public function create(Request $request)
     {
         $legel = new Legalization();
         try{
@@ -52,11 +53,14 @@ class LegalizationController extends Controller
             $legel->paymentID = 0;
             $legel->status = "Open";
 
+
             $legel->save();
+
+            return Redirect::to('/services');
         }
         catch(Exception $e){
 
-        
+            return Redirect::to('/services');
         }
     }
 
