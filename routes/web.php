@@ -46,6 +46,10 @@ Route::get('/contact/index', 'ContactController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users', 'UsersController@index')->name('listall_users');
+<<<<<<< HEAD
     
+=======
+    Route::get('/admin/users/deactive', 'UsersController@update');
+>>>>>>> 7a367b1d9cb5e5b09e301eb162ed4cd8b9ca8dac
 });
 

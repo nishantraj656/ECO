@@ -23,7 +23,7 @@ class PassportController extends Controller
      */
     public function index()
     {
-        return view('admin.users.Passport');
+        return view('Admin.users.Passport');
     }
 
     /**This function is use to create new passport form*/

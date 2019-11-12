@@ -9,6 +9,6 @@ class AdminhomeController extends Controller
     //
     public function payment()
     {
-        return view('admin.users.Payment');
+        return view('Admin.users.Payment');
     }
 }

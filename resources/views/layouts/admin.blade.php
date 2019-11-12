@@ -87,14 +87,18 @@
             <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
             
-            <li class="nav-item ">
-              <a class="nav-link" href="{{route('listall_users')}}">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>My Profile</p>
-              </a>
-            </li>
+            
 
             @if(Auth::User()->user_type == "User")
+
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('listall_users')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>My Profile</p>
+                </a>
+              </li>
+
+
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('services')}}">
                   <i class="nav-icon fas fa-edit"></i>
