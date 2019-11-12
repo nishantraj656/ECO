@@ -48,3 +48,10 @@ Route::group(['middleware' => 'auth'], function () {
     
 });
 
+Route::get('/index.html', function () {
+    return view('index');
+});
+
+Route::get('/', function () {
+    return view('index');
+});
