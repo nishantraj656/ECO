@@ -54,8 +54,8 @@ class HomeController extends Controller
             $ethiopian = Ethiopian::where('status','Open')->get();
             $passport = passport::where('status','Open')->get();
             $Legalzation = Legalization::where('status','Open')->get();
-            $Visa = where('status','Open')->get();
-            $Schedule = where('status','Open')->get();
+            $Visa = Visa::where('status','Open')->get();
+            $Schedule =Schedule::where('status','Open')->get();
         }
 
         
