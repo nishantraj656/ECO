@@ -31,8 +31,7 @@
             @foreach($ethiopian as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->name[$i]}}</td>
-              <td >{{$item->name[1]->mname}}</td>
+              <td >{{$item->name}}</td>
               <td>{{$item->passportnumber}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
@@ -57,8 +56,8 @@
             @foreach($shedule as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->passportnumber}}</td>
-              <td>{{$item->passportnumber}}</td>
+              <td >{{$item->name}}</td>
+              <td>{{$item->typeofService}}</td>
               <td>{{$item->status}}</td>
             </tr>
            @endforeach
@@ -82,7 +81,7 @@
             @foreach($passport as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->passportnumber}}</td>
+              <td >{{$item->name}}</td>
               <td>{{$item->address}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
@@ -108,7 +107,7 @@
             @foreach($visa as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->passportnumber}}</td>
+              <td >{{$item->name}}</td>
               <td>{{$item->passportnumber}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
@@ -134,7 +133,7 @@
             @foreach($legalization as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->passportnumber}}</td>
+              <td >{{$item->name}}</td>
               <td>{{$item->passportnumber}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
