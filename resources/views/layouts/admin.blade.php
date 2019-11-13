@@ -136,7 +136,7 @@
                   <p>User </p>
                 </a>
               </li>
-
+              
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
@@ -144,13 +144,12 @@
                 </a>
               </li>
 
-              <li class="nav-item ">
+              <!-- <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>Mail Box</p>
                 </a>
-              </li>
-              
+              </li> -->
             
             @endif
             <!-- <li class="nav-item ">
