@@ -61,7 +61,6 @@
         </div>
       </nav>  
 
-      <h1>fuck</h1>
 
 
       {{-- SLider:START --}}
