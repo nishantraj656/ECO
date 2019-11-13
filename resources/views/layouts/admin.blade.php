@@ -124,12 +124,7 @@
             @endif
 
             @if(Auth::User()->user_type != "User")
-            <li class="nav-item ">
-              <a class="nav-link" href="{{route('listall_users')}}">
-                <i class="nav-icon fas fa-edit"></i>
-                <p>My Profile </p>
-              </a>
-            </li>
+            
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
@@ -141,6 +136,12 @@
                 <a class="nav-link" href="{{route('home')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>Current Application</p>
+                </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="{{route('SettelApp')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Setteled App </p>
                 </a>
               </li>
 

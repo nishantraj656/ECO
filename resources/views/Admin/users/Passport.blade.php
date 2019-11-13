@@ -46,36 +46,36 @@
 
           <div class="form-group">
             <label for="dob">DOB : </label>
-            <input type="date" class="form-control" name="dob" require> 
+            <input type="date" class="form-control" name="dob" required> 
           </div>
 
           <div class="form-group">
             <label for="height">Height : </label>
-            <input type="number" class="form-control" name="height" require>
+            <input type="number" class="form-control" name="height" required>
           </div>
 
           <div class="form-group">
             <label for="ecolor">Eye Color : </label>
-            <input type="text" class="form-control" name="ecolor" require>
+            <input type="text" class="form-control" name="ecolor" required>
           </div>
           <div class="form-group">
             <label for="hcolor">Hair Color : </label>
-            <input type="text" class="form-control" name="hcolor" require>
+            <input type="text" class="form-control" name="hcolor" required>
           </div>
 
           <div class="form-group">
             <label for="occupation">Occupation : </label>
-            <input type="text" class="form-control" name="occupation" require>
+            <input type="text" class="form-control" name="occupation" required>
           </div>
 
           <div class="form-group">
             <label for="ppn">Previous Passport No. : </label>
-            <input type="text" class="form-control" name="ppn">
+            <input type="text" class="form-control" name="ppn" required>
           </div>
 
           <div class="form-group">
             <label for="poissue">Place of issue : </label>
-            <input type="text" class="form-control" name="poissue">
+            <input type="text" class="form-control" name="poissue" required>
           </div>
 
           <div class="form-group">

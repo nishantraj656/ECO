@@ -79,5 +79,26 @@ class HomeController extends Controller
         
     
     }
+
+
+    public function SetteledApplication(Request $request){
+
+
+        $ethiopian = Ethiopian::where('status','<>','Open')->get();
+        $passport = passport::where('status','<>','Open')->get();
+        $Legalzation = Legalization::where('status','<>','Open')->get();
+        $Visa = Visa::where('status','<>','Open')->get();
+        $Schedule = Schedule::where('status','<>','Open')->get();
+
+        $data = array('ethiopian'=>$ethiopian,
+                      'passport'=>$passport,
+                      'legalization'=>$Legalzation ,
+                      'visa'=>$Visa,
+                      'shedule'=>$Schedule
+                );
+
+        return view('Admin.SetteledApplication')->with($data);
+
+    }
     
 }
