@@ -138,7 +138,7 @@
               </li>
               
               <li class="nav-item ">
-                <a class="nav-link" href="{{route('listall_users')}}">
+                <a class="nav-link" href="{{route('home')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>Current Application</p>
                 </a>
