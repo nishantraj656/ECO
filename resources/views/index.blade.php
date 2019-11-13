@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="css/nivo-lightbox.css">
     <link rel="stylesheet" href="css/main.css">    
     <link rel="stylesheet" href="css/responsive.css">
+    {{-- Line ICon CDN --}}
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
 
   </head>
   
@@ -61,7 +63,6 @@
         </div>
       </nav>  
 
-      <h1>fuck</h1>
 
 
       {{-- SLider:START --}}
@@ -74,7 +75,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="
+              <img style="height:430px" src="
 https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-4.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 {{-- <h5>First slide label</h5> --}}
@@ -82,14 +83,14 @@ https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-4.jpg" class="d-b
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-3-1.jpg" class="d-block w-100" alt="...">
+              <img style="height:430px" src="https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-3-1.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 {{-- <h5>Second slide label</h5> --}}
                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> --}}
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-2.jpg" class="d-block w-100" alt="...">
+              <img style="height:430px" src="https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-2.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 {{-- <h5>Third slide label</h5> --}}
                 {{-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> --}}
