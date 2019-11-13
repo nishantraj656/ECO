@@ -74,21 +74,22 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://rukminim1.flixcart.com/flap/1688/280/image/1a492ed9224534e8.jpg?q=50" class="d-block w-100" alt="...">
+              <img src="
+https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-4.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 {{-- <h5>First slide label</h5> --}}
                 {{-- <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> --}}
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://rukminim1.flixcart.com/flap/1688/280/image/aff0eb55f47c5bb6.jpg?q=50" class="d-block w-100" alt="...">
+              <img src="https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-3-1.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 {{-- <h5>Second slide label</h5> --}}
                 {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> --}}
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://rukminim1.flixcart.com/flap/1688/280/image/2da22ddb4ab1f7bd.jpg?q=50" class="d-block w-100" alt="...">
+              <img src="https://ethiopianembassy.org/wp-content/uploads/2019/01/banner-2.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 {{-- <h5>Third slide label</h5> --}}
                 {{-- <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> --}}
