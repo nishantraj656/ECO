@@ -37,6 +37,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users/deactive', 'UsersController@update');
 
     Route::post('/ethiopian','EthiopianController@create')->name('ethiopian');
+    Route::get('/paymentShow', function(){
+            return view('Admin.users.Payment');
+    })->name('paymentShow');
     Route::post('/payment', 'PaymentController@create')->name('payment');
     Route::post('/legel','LegalizationController@create')->name('legel');
     Route::get('/home', 'HomeController@index')->name('home');

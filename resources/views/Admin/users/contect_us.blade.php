@@ -1,5 +1,5 @@
-@extends('Admin.users.services')
-@section('services')
+@extends('layouts.admin')
+@section('content')
 
     <!-- Content Header (Page header) -->
     <div class="content-header">

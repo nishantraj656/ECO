@@ -109,7 +109,7 @@
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link" href="{{route('listall_users')}}">
+                <a class="nav-link" href="{{route('paymentShow')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>Payment</p>
                 </a>
