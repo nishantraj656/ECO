@@ -4,10 +4,10 @@
       <div class="container-fluid">
         <table class="table table-bordered table-striped">
           <tr>
+            <th>Application ID</th>
             <th>Name</th>
-            <th>Email</th>
-            <th>description</th>
-            <th>date</th>
+            <th>Application</th>
+            <th></th>
 </tr>
   @foreach($datas as $data)
   <tr>

@@ -82,5 +82,7 @@ Route::group(['middleware' => 'auth'], function () {
         return view('Admin.users.services');
     })->name('services');
 
+    Route::get('current','IndexController@currentApplicationList');
+   
 });
 
