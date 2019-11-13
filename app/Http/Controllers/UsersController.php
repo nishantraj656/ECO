@@ -16,7 +16,7 @@ class UsersController extends Controller
     {
         $arr['listall_users']= User::all();
         // return view ('Admin.users.index')->with($arr);
-        return view('Admin.users.index',["data"=>User::all()]);
+        return view('Admin.userlist',["data"=>User::all()]);
 
     } 
 
@@ -33,6 +33,6 @@ class UsersController extends Controller
         // // dd();
         
 
-        return view('Admin.users.index',["data"=>User::all()]);
+        return view('Admin.userlist',["data"=>User::all()]);
     }
 }

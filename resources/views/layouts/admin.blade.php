@@ -124,26 +124,27 @@
             @endif
 
             @if(Auth::User()->user_type != "User")
+              
+            <li class="nav-item ">
+                <a class="nav-link" href="{{route('home')}}">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Dashboard</p>
+                </a>
+              </li>
+              
               <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
-                  <p>User List</p>
+                  <p>User</p>
                 </a>
               </li>
 
-              <li class="nav-item ">
-                <a class="nav-link" href="{{route('listall_users')}}">
-                  <i class="nav-icon fas fa-edit"></i>
-                  <p>Process</p>
-                </a>
-              </li>
-
-              <li class="nav-item ">
+              <!-- <li class="nav-item ">
                 <a class="nav-link" href="{{route('listall_users')}}">
                   <i class="nav-icon fas fa-edit"></i>
                   <p>View</p>
                 </a>
-              </li>
+              </li> -->
             
             @endif
             <!-- <li class="nav-item ">

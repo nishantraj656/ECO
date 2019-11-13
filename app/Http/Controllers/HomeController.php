@@ -54,8 +54,8 @@ class HomeController extends Controller
             $ethiopian = Ethiopian::where('status','Open')->get();
             $passport = passport::where('status','Open')->get();
             $Legalzation = Legalization::where('status','Open')->get();
-            $Visa = where('status','Open')->get();
-            $Schedule = where('status','Open')->get();
+            $Visa = Visa::where('status','Open')->get();
+            $Schedule = Schedule::where('status','Open')->get();
         }
 
         
@@ -70,7 +70,13 @@ class HomeController extends Controller
         // echo "Fatched Data";
         // var_dump($ethiopian);
 
-        return view('Admin.dashboard')->with($data);
+        if( Auth::User()->user_type == "User"){
+            return view('Admin.dashboard')->with($data);
+        }
+        else{
+            return view('Admin.users.index')->with($data);
+        }
+        
     
     }
     
