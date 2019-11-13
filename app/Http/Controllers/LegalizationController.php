@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Legalization;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class LegalizationController extends Controller
 {
@@ -35,11 +36,11 @@ class LegalizationController extends Controller
             $legel->name = json_encode($name);
             $legel->gender = $request->sex;
             $legel->dob = $request->dob;
-            $legel->placeOfBirth = $request->bplace;
-            $legel->nasality = $request->nationality;
+            $legel->placeDOB = $request->bplace;
+            $legel->nationality = $request->nationality;
             $legel->passportnumber = $request->passport;
             $legel->email = $request->email;
-            $legel->marital = $request->mststus;
+            $legel->phonenumber = $request->phone;
             $legel->userID = Auth::User()->id;
 
             $address = array('base'=>$request->address,

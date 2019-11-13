@@ -28,7 +28,7 @@ class CreateVisasTable extends Migration
             $table->string('purpose');
             $table->date('departure');
             $table->date('arrivalInEthiopia')->nullable();
-            $table->date('stayInEthiopia')->nullable();
+            $table->string('stayInEthiopia')->nullable();
             $table->unsignedBigInteger('userID');
             $table->foreign('userID')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('paymentID');

@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\payment;
+use App\Ethiopian;
+use App\passport;
+use App\Legalization;
+use App\Visa;
+use App\Schedule;
+use Auth;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -30,17 +36,45 @@ class PaymentController extends Controller
             $payment->cardNumber = $request->card_number;
             $payment->appNo = $request->App_num;
             $payment->expDate = $request->exp_date;
-            $payment->scode = $request->code;
+            $payment->code = $request->scode;
             $payment->name = $request->chname;
 
-            $payment->status = "0";
+            $payment->status = "Done";
 
             $payment->save();
         }
         catch(Exception $e){
-
         
         }
+
+        $id = payment::max('id');
+        switch ($request->TOS) {
+            case 'Visa':
+                $Data = Visa::find(Auth::User()->id);
+                $Data->paymentID = $id;
+                $Data->save();
+                break;
+
+            case 'Passport':
+                $Data = passport::find(Auth::User()->id);
+                $Data->paymentID = $id;
+                $Data->save();
+                break;
+
+            case 'EOI':
+                $Data = Ethiopian::find(Auth::User()->id);
+                $Data->paymentID = $id;
+                $Data->save();
+                break;
+
+            case 'Auth&legel':
+                $Data = Legalization::find(Auth::User()->id);
+                $Data->paymentID = $id;
+                $Data->save();
+                break;
+        }
+
+        return Redirect::to('/home');
 
     }
 

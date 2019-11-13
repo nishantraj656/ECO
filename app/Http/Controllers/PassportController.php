@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\passport;
 class PassportController extends Controller
@@ -28,7 +30,7 @@ class PassportController extends Controller
 
     /**This function is use to create new passport form*/
 
-    public function create(PassportRequest $request)
+    public function create(Request $request)
     {
         $passport = new passport();
         try{
@@ -62,8 +64,12 @@ class PassportController extends Controller
             $passport->status = "Open";
 
             $passport->save();
+
+            return Redirect::to('/home');
         }
         catch(Exception $e){
+
+            return Redirect::to('/home');
 
         }
     }

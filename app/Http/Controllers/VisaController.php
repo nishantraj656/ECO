@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Visa;
+use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class VisaController extends Controller
 {
@@ -26,7 +28,7 @@ class VisaController extends Controller
         return view('Admin.users.visa');
     }
 
-    public function create(VisaRequest $request){
+    public function create(Request $request){
         
         $visa = new Visa();
         try{
@@ -41,11 +43,12 @@ class VisaController extends Controller
             $visa->nasality = $request->nationality;
             $visa->phone = $request->phone;
             $visa->email = $request->email;
+            $visa->placeOfBirth = "";
             $visa->marital = $request->mststus;
             $visa->departure = $request->DFU;
             $visa->arrivalInEthiopia = $request->AIE;
             $visa->stayInEthiopia = $request->DSE;
-            $visa->passport = $request->passportnumber;
+            $visa->passportnumber = $request->passport;
             $visa->userID = Auth::User()->id;
             $visa->purpose = $request->pot;
 
@@ -60,8 +63,12 @@ class VisaController extends Controller
             $visa->status = "Open";
 
             $visa->save();
+
+            return Redirect::to('/home');
         }
         catch(Exception $e){
+
+            return Redirect::to('/home');
 
         }
     }

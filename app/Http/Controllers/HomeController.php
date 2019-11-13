@@ -34,24 +34,31 @@ class HomeController extends Controller
 
         if( Auth::User()->user_type == "User")
         {
-            $ethiopian = Ethiopian::where('status',0)
-                                    ->where('UserID',$id);
-            $passport = passport::where('status',0)
-                                    ->where('UserID',$id);
-            $Legalzation = Legalization::where('status',0)
-                                    ->where('UserID',$id);
-            $Visa = Visa::where('status',0)
-                                    ->where('UserID',$id);
-            $Schedule = Schedule::where('status',0)
-                                    ->where('UserID',$id);
+            $ethiopian = Ethiopian::where('status','Open')
+                                    ->where('UserID',$id)
+                                    ->get();
+            $passport = passport::where('status','Open')
+                                    ->where('UserID',$id)
+                                    ->get();
+            $Legalzation = Legalization::where('status','Open')
+                                    ->where('UserID',$id)
+                                    ->get();
+            $Visa = Visa::where('status','Open')
+                            ->where('UserID',$id)
+                            ->get();
+            $Schedule = Schedule::where('status','Open')
+                                    ->where('UserID',$id)
+                                    ->get();
         }
         else{
-            $ethiopian = Ethiopian::where('status',0);
-            $passport = passport::where('status',0);
-            $Legalzation = Legalization::where('status',0);
-            $Visa = Visa::where('status',0);
-            $Schedule = Schedule::where('status',0);
+            $ethiopian = Ethiopian::where('status','Open')->get();
+            $passport = passport::where('status','Open')->get();
+            $Legalzation = Legalization::where('status','Open')->get();
+            $Visa = where('status','Open')->get();
+            $Schedule = where('status','Open')->get();
         }
+
+        
 
         $data = array('ethiopian'=>$ethiopian,
                       'passport'=>$passport,
@@ -59,6 +66,9 @@ class HomeController extends Controller
                       'visa'=>$Visa,
                       'shedule'=>$Schedule
                 );
+
+        // echo "Fatched Data";
+        // var_dump($ethiopian);
 
         return view('Admin.dashboard')->with($data);
     

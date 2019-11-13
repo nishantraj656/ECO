@@ -1,6 +1,5 @@
-@extends('Admin.users.services')
-@section('services')
-<div class="content-wrapper">
+@extends('layouts.admin')
+@section('content')
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -11,7 +10,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Users</li>
+              <li class="breadcrumb-item active">Payment</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -21,6 +20,16 @@
       <div class="container-fluid">
         <form class="form-horizontal" method = "POST" action="{{route('payment')}}">
             @csrf
+            <div class="form-group">
+              <label for="TOS">Types of Service :</label>
+              <select class="form-control" name="TOS">
+                <option value="Visa">Visa Service</option>
+                <option value="Passport">Passport Service</option>
+                <option value="EOI">Ethiopia Origional ID</option>
+                <option value="Auth&legel"> Authentication And Ligalization</option>
+              </select>
+            </div>
+
             <div class="form-group">
             <label class="control-label col-sm-4" for="email">Enter Application No:</label>
             <div class="col-sm-8">
@@ -59,5 +68,5 @@
            </form>
       </div>
     </section>
-</div>
+
 @endsection;

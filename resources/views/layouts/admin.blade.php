@@ -92,9 +92,9 @@
             @if(Auth::User()->user_type == "User")
 
               <li class="nav-item ">
-                <a class="nav-link" href="{{route('listall_users')}}">
+                <a class="nav-link" href="{{route('home')}}">
                   <i class="nav-icon fas fa-edit"></i>
-                  <p>My Profile</p>
+                  <p>Dashboard</p>
                 </a>
               </li>
 
@@ -109,9 +109,9 @@
               </li>
 
               <li class="nav-item ">
-                <a class="nav-link" href="{{route('listall_users')}}">
+                <a class="nav-link" href="{{route('paymentShow')}}">
                   <i class="nav-icon fas fa-edit"></i>
-                  <p>Application</p>
+                  <p>Payment</p>
                 </a>
               </li>
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Schedule;
+use Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class SheduleController extends Controller
 {
@@ -28,7 +30,7 @@ class SheduleController extends Controller
     }
 
 
-    public function create(SheduleRequest $request)
+    public function create(Request $request)
     {
         $shedule = new Schedule();
         try{
@@ -39,13 +41,21 @@ class SheduleController extends Controller
             $shedule->name = json_encode($name);
             $shedule->DeparturefromUSA = $request->DFU;
             $shedule->email = $request->email;
+            $shedule->address = json_encode(array('0'=>$request->email));
+            $shedule->comment = "No Comment";
+            $shedule->time = $request->time;
+            
             $shedule->phonenumber = $request->phone;
             $shedule->typeofService = $request->TOS;
+            $shedule->userID = Auth::User()->id;
             $shedule->status = "Open";
             $shedule->save();
+
+            return Redirect::to('\home');
         }
         catch(Exception $e){
-
+            
+            return Redirect::to('\home');
         }
     }
 }

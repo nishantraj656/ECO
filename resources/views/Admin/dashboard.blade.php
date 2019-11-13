@@ -1,17 +1,14 @@
 @extends('layouts.admin')
 @section('content')
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Users</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="{{route('home')}}">Dashboard</a></li>
-              <li class="breadcrumb-item active">Work</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -19,14 +16,131 @@
     </div>
     <section class="content">
       <div class="container-fluid">
-    <table class="table table-bordered table-striped">
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-        <th>password</th>
-      </tr>
-      
-    </table>
-  </div>
+      <h3 class="m-0 text-dark">Ethiopian ID</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col" >App No.</th>
+              <th scope="col" >Name</th>
+              <th scope="col" >Passport No.</th>
+              <th scope="col" >Payment</th>
+              <th scope="col" >Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($ethiopian as $item)
+            <tr>
+              <td scope="row">{{$item->id}}</td>
+              <td >{{$item->name}}</td>
+              <td>{{$item->passportnumber}}</td>
+              <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
+              <td>{{$item->status}}</td>
+            </tr>
+           @endforeach
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container-fluid">
+      <h3 class="m-0 text-dark">Appointment</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col" >App No.</th>
+              <th scope="col" >Name</th>
+              <th scope="col" >Purpose</th>
+              <th scope="col" >Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($shedule as $item)
+            <tr>
+              <td scope="row">{{$item->id}}</td>
+              <td >{{$item->name}}</td>
+              <td>{{$item->typeofService}}</td>
+              <td>{{$item->status}}</td>
+            </tr>
+           @endforeach
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container-fluid">
+      <h3 class="m-0 text-dark">Passport</h3>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col" >App No.</th>
+              <th scope="col" >Name</th>
+              <th scope="col" >Address</th>
+              <th scope="col" >Payment</th>
+              <th scope="col" >Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($passport as $item)
+            <tr>
+              <td scope="row">{{$item->id}}</td>
+              <td >{{$item->name}}</td>
+              <td>{{$item->address}}</td>
+              <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
+              <td>{{$item->status}}</td>
+            </tr>
+           @endforeach
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container-fluid">
+      <h1 class="m-0 text-dark">Visa</h1>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col" >App No.</th>
+              <th scope="col" >Name</th>
+              <th scope="col" >Passport No.</th>
+              <th scope="col" >Payment</th>
+              <th scope="col" >Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($visa as $item)
+            <tr>
+              <td scope="row">{{$item->id}}</td>
+              <td >{{$item->name}}</td>
+              <td>{{$item->passportnumber}}</td>
+              <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
+              <td>{{$item->status}}</td>
+            </tr>
+           @endforeach
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container-fluid">
+      <h1 class="m-0 text-dark">Authentication & legelization</h1>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col" >App No.</th>
+              <th scope="col" >Name</th>
+              <th scope="col" >Passport No.</th>
+              <th scope="col" >Payment</th>
+              <th scope="col" >Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($legalization as $item)
+            <tr>
+              <td scope="row">{{$item->id}}</td>
+              <td >{{$item->name}}</td>
+              <td>{{$item->passportnumber}}</td>
+              <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
+              <td>{{$item->status}}</td>
+            </tr>
+           @endforeach
+          </tbody>
+        </table>
+      </div>
 </section>
 @endsection;
