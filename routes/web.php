@@ -27,6 +27,7 @@ Route::get('/', function () {
 Route::get('/index', 'IndexController@index')->name('index');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/contectUs', 'ContactController@create')->name('contactUs');
 // example of sub page path route
 Route::get('/contact/index', 'ContactController@index')->name('home');
 
@@ -46,10 +47,7 @@ Route::get('/contact/index', 'ContactController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users', 'UsersController@index')->name('listall_users');
-<<<<<<< HEAD
     
-=======
     Route::get('/admin/users/deactive', 'UsersController@update');
->>>>>>> 7a367b1d9cb5e5b09e301eb162ed4cd8b9ca8dac
 });
 

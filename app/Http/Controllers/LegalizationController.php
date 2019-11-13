@@ -35,7 +35,7 @@ class LegalizationController extends Controller
             $legel->name = json_encode($name);
             $legel->gender = $request->sex;
             $legel->dob = $request->dob;
-            $legel->placeOfBirth = $request->bplace;
+            $legel->placeDOB = $request->bplace;
             $legel->nasality = $request->nationality;
             $legel->passportnumber = $request->passport;
             $legel->email = $request->email;

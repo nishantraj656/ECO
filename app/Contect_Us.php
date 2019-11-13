@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ContectUS extends Model
+class Contect_Us extends Model
 {
-    
+    //
 }
