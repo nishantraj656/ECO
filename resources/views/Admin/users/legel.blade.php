@@ -65,14 +65,14 @@
 
           
           
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="mststus">Marital Status :</label>
             <select class="form-control" name="mststus">
               <option value="single">Single</option>
               <option value="merrid">Merrid</option>
               <option value="divorced">Divorced</option>
             </select>
-          </div>
+          </div> -->
 
           <div class="form-group">
             <label for="address">Address :</label>

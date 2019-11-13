@@ -18,7 +18,8 @@
     </div>
     <section class="content">
       <div class="container">
-        <form class="form" action="/action_page.php">
+        <form class="form" method="POST" action="{{route('visaAdd')}}">
+            @csrf
           <div class="form-group">
             <label for="name">Full Name:</label>
             <div class="row">
@@ -119,7 +120,7 @@
             <label for="DSE">Duration of stay in Ethiopia : </label>
             <input type="text" class="form-control" name="DSE">
           </div>
-
+          
           <button type="submit" class="btn btn-success">Submit</button>
         </form>
       </div>

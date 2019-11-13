@@ -19,7 +19,8 @@
     </div>
     <section class="content">
       <div class="container">
-        <form class="form" action="/action_page.php">
+        <form class="form" method="POST" action="{{route('sheduleAdd')}}">
+          @csrf
           <div class="form-group">
             <label for="name">Full Name:</label>
             <div class="row">
@@ -32,9 +33,6 @@
             </div>
           </div>
         
-
-          
-          
           <div class="form-group">
             <label for="phone">Phone No. : </label>
             <input type="number" class="form-control" name="phone" require>
@@ -50,6 +48,10 @@
             <input type="date" class="form-control" name="DFU" require> 
           </div>
 
+          <div class="form-group">
+            <label for="time">Time : </label>
+            <input type="time" class="form-control" name="time" require> 
+          </div>
 
           <div class="form-group">
             <label for="TOS">Types of Service :</label>
