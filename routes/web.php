@@ -42,8 +42,11 @@ Route::get('/contact/index', 'ContactController@index')->name('home');
         return view('Admin.users.services');
     })->name('services');
 
+    Route::get('current','IndexController@currentApplicationList');
+
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/users', 'UsersController@index')->name('listall_users');
     Route::get('/admin/users/deactive', 'UsersController@update');
+    
 });
 
