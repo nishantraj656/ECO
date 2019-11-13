@@ -31,7 +31,13 @@
             @foreach($ethiopian as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->name}}</td>
+              <td >@php
+                 if($item->name != null)
+                 {
+                  $v = json_decode($item->name);
+                  echo $v->fname.' '.$v->mname.' '.$v->lname;
+               }
+              @endphp </td>
               <td>{{$item->passportnumber}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
@@ -56,7 +62,13 @@
             @foreach($shedule as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->name}}</td>
+              <td >@php
+                  if($item->name != null)
+                 {
+                  $v = json_decode($item->name);
+                  echo $v->fname.' '.$v->mname.' '.$v->lname;
+               }
+               @endphp </td>
               <td>{{$item->typeofService}}</td>
               <td>{{$item->status}}</td>
             </tr>
@@ -80,9 +92,26 @@
           <tbody>
             @foreach($passport as $item)
             <tr>
+              {{-- {"base": "AT - KIRTANIYA,\r\nP.O - AMMAPALI ,\r\nP.S - PIRPAINTI\r\n
+              Dist. - BHAGALPUR(BIHAR)", "city": "BHAGALPUR", "state": "BIHAR", "country": "India"} --}}
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->name}}</td>
-              <td>{{$item->address}}</td>
+              <td >@php
+                  if($item->name != null)
+                 {
+                  $v = json_decode($item->name);
+                  echo $v->fname.' '.$v->mname.' '.$v->lname;
+               }
+               @endphp </td>
+              <td>@php
+                if($item->address != null)
+                {
+                  $v = json_decode($item->address);
+                  echo 'Street : '. $v->base.'<br>';
+                  echo 'City : '.$v->city.'<br>';
+                  echo 'State : '.$v->state.'<br>';
+                  echo 'Street : '.$v->country.'<br>';
+                }
+               @endphp </td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
             </tr>
@@ -107,7 +136,13 @@
             @foreach($visa as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->name}}</td>
+              <td >@php
+                  if($item->name != null)
+                 {
+                  $v = json_decode($item->name);
+                  echo $v->fname.' '.$v->mname.' '.$v->lname;
+               }
+               @endphp </td>
               <td>{{$item->passportnumber}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>
@@ -133,7 +168,13 @@
             @foreach($legalization as $item)
             <tr>
               <td scope="row">{{$item->id}}</td>
-              <td >{{$item->name}}</td>
+              <td >@php
+                  if($item->name != null)
+                 {
+                  $v = json_decode($item->name);
+                  echo $v->fname.' '.$v->mname.' '.$v->lname;
+               }
+               @endphp </td>
               <td>{{$item->passportnumber}}</td>
               <td>{{($item->paymentID) ? __('Done') : __('Pending')}}</td>
               <td>{{$item->status}}</td>

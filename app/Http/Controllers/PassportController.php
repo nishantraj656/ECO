@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ImageUpload;
 use Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
@@ -59,7 +60,12 @@ class PassportController extends Controller
                             );
             
             $passport->address = json_encode($address);
+
+            $pic = $request->file('pic');
             $passport->pic = "";
+            if($pic != null){
+                 $passport->pic =ImageUpload::saveImage($request->file('pic'),'passport') ;
+                }
             $passport->paymentID = 0;
             $passport->status = "Open";
 
