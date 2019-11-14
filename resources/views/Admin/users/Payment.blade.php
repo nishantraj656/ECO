@@ -33,31 +33,32 @@
             <div class="form-group">
             <label class="control-label col-sm-4" for="email">Enter Application No:</label>
             <div class="col-sm-8">
-                <input type="number" class="form-control" id="App_no" placeholder="Application No" name="App_num">
+                <input type="number" class="form-control" id="App_no" placeholder="Application No" name="App_num" required>
             </div>
             </div>
+
             <div class="form-group">
             <label class="control-label col-sm-4" for="email">Card No.:</label>
             <div class="col-sm-8">
-                <input type="number" class="form-control" id="card_number" placeholder="Card No." name="card_number">
+                <input type="number" class="form-control" id="card_number" placeholder="Card No." name="card_number" required>
             </div>
             </div>
             <div class="form-group">
             <label class="control-label col-sm-4" for="pwd">Exp Date:</label>
             <div class="col-sm-8">          
-                <input type="date" class="form-control" id="exp_date" placeholder="Exp Date" name="exp_date">
+                <input type="date" class="form-control" id="exp_date" placeholder="Exp Date" name="exp_date" required>
             </div>
             </div>
             <div class="form-group">
             <label class="control-label col-sm-4" for="pwd">Security Code:</label>
             <div class="col-sm-8">          
-                <input type="number" class="form-control" id="scode" placeholder="Security Code" name="scode">
+                <input type="number" class="form-control" id="scode" placeholder="Security Code" name="scode" required>
             </div>
             </div>
             <div class="form-group">
             <label class="control-label col-sm-4" for="pwd">Card Holder Name :</label>
             <div class="col-sm-8">          
-                <input type="text" class="form-control" id="chname" placeholder="Card Holder Name" name="chname">
+                <input type="text" class="form-control" id="chname" placeholder="Card Holder Name" name="chname" required>
             </div>
             </div>
             <div class="form-group">        

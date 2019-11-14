@@ -59,6 +59,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     /*
     |------------------------------------------------------------------------------
+    |   Show all Setteled application list Admin 
+    |------------------------------------------------------------------------------
+    */
+
+    Route::get('/SettelApp', 'HomeController@SetteledApplication')->name('SettelApp');
+
+    /*
+    |------------------------------------------------------------------------------
     |  User Service url    
     |------------------------------------------------------------------------------
     */
@@ -86,3 +94,6 @@ Route::group(['middleware' => 'auth'], function () {
    
  });
 
+
+
+Route::get('sendMail', 'WelcomeController@sendMail');

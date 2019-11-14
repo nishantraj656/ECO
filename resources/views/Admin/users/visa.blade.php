@@ -45,17 +45,17 @@
 
           <div class="form-group">
             <label for="dob">DOB : </label>
-            <input type="date" class="form-control" name="dob" require> 
+            <input type="date" class="form-control" name="dob" required> 
           </div>
 
           <div class="form-group">
             <label for="nationality">Nationality : </label>
-            <input type="nationality" class="form-control" name="nationality" require>
+            <input type="nationality" class="form-control" name="nationality" required>
           </div>
 
           <div class="form-group">
             <label for="passport">Passport No. : </label>
-            <input type="text" class="form-control" name="passport">
+            <input type="text" class="form-control" name="passport" required>
           </div>
 
           <!-- <div class="form-group">
@@ -74,7 +74,7 @@
 
           <div class="form-group">
             <label for="address">Address :</label>
-            <textarea class="form-control" rows="5" name="address"></textarea>
+            <textarea class="form-control" rows="5" name="address" required></textarea>
           </div>
           
           <div class="form-group">
@@ -86,39 +86,39 @@
                 <input type="text" class="form-control"  name="State" placeholder="State">             
               </div>
               <div class="col-sm-4">
-                <input type="text" class="form-control" name="Country" placeholder="Country">             
+                <input type="text" class="form-control" name="Country" placeholder="Country" >             
               </div>
             </div>
           </div>
 
           <div class="form-group">
             <label for="phone">Phone No. : </label>
-            <input type="number" class="form-control" name="phone" require>
+            <input type="number" class="form-control" name="phone" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email : </label>
-            <input type="email" class="form-control" name="email" require>
+            <input type="email" class="form-control" name="email" required>
           </div>
 
           <div class="form-group">
             <label for="pot">Purpose of Travel : </label>
-            <input type="text" class="form-control" name="pot">
+            <input type="text" class="form-control" name="pot" required>
           </div>
 
           <div class="form-group">
             <label for="DFU">Departure From USA : </label>
-            <input type="date" class="form-control" name="DFU" require> 
+            <input type="date" class="form-control" name="DFU" required> 
           </div>
 
           <div class="form-group">
             <label for="AIE">Date of Arrival in Ethiopia : </label>
-            <input type="date" class="form-control" name="AIE" require> 
+            <input type="date" class="form-control" name="AIE" required> 
           </div>
 
           <div class="form-group">
             <label for="DSE">Duration of stay in Ethiopia : </label>
-            <input type="text" class="form-control" name="DSE">
+            <input type="text" class="form-control" name="DSE" required>
           </div>
           
           <button type="submit" class="btn btn-success">Submit</button>
